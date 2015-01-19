@@ -1,20 +1,23 @@
-Summary:  TODO
-Name: nethserver-webvirtmgr
-Version: 0.0.1
-Release: 1%{?dist}
-License: GPL
-URL: %{url_prefix}/%{name} 
-Source0: %{name}-%{version}.tar.gz
-BuildArch: noarch
+Summary:  	WebVirtMgr panel for manage virtual machine
+Name: 		  nethserver-webvirtmgr
+Version: 	  0.0.1
+Release: 	  1%{?dist}
+License: 	  GPL
+URL: 		    %{url_prefix}/%{name}
+Source0: 	  %{name}-%{version}.tar.gz
+BuildArch: 	noarch
 
 Requires: nethserver-base
 Requires: webvirtmgr
 
 BuildRequires: perl
-BuildRequires: nethserver-devtools 
+BuildRequires: nethserver-devtools
 
 %description
-TODO
+WebVirtMgr is a libvirt-based Web interface for managing virtual machines.
+It allows you to create and configure new domains, and adjust a domains resource
+allocation. A VNC viewer presents a full graphical console to the guest domain.
+KVM is currently the only hypervisor supported.
 
 %prep
 %setup
