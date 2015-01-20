@@ -34,4 +34,9 @@ event_actions($event, qw(
       nethserver-webvirtmgr-conf 20
 ));
 
+event_templates($event, qw(
+      /usr/lib/python2.6/site-packages/webvirtmgr/conf/gunicorn.conf.py
+));
+
+event_services($event, 'webvirtmgr' => 'restart');
 event_services($event, 'webvirtmgr-novnc' => 'restart');

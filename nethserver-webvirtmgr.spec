@@ -7,7 +7,7 @@ URL: 		    %{url_prefix}/%{name}
 Source0: 	  %{name}-%{version}.tar.gz
 BuildArch: 	noarch
 
-Requires: nethserver-base
+Requires: nethserver-libvirt
 Requires: webvirtmgr
 
 BuildRequires: perl
