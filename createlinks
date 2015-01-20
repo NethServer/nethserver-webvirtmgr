@@ -34,4 +34,4 @@ event_actions($event, qw(
       nethserver-webvirtmgr-conf 20
 ));
 
-#event_services($event, 'webvirtmgr' => 'restart');
+event_services($event, 'webvirtmgr-novnc' => 'restart');
