@@ -1,14 +1,14 @@
-Summary:  	WebVirtMgr panel for manage virtual machine
-Name: 		  nethserver-webvirtmgr
-Version: 	  0.0.1
-Release: 	  1%{?dist}
-License: 	  GPL
-URL: 		    %{url_prefix}/%{name}
-Source0: 	  %{name}-%{version}.tar.gz
-BuildArch: 	noarch
+Summary:    WebVirtMgr panel for manage virtual machine
+Name:       nethserver-webvirtmgr
+Version:    0.0.1
+Release:    1%{?dist}
+License:    GPL
+URL:        %{url_prefix}/%{name}
+Source0:    %{name}-%{version}.tar.gz
+BuildArch:  noarch
 
-Requires: nethserver-libvirt
-Requires: webvirtmgr
+Requires:   nethserver-libvirt
+Requires:   webvirtmgr
 
 BuildRequires: perl
 BuildRequires: nethserver-devtools

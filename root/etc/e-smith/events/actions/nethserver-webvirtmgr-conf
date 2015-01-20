@@ -18,12 +18,13 @@
 # You should have received a copy of the GNU General Public License
 # along with NethServer.  If not, see <http://www.gnu.org/licenses/>.
 #
-
 # set django environment
 export PYTHONPATH=$PYTHONPATH:/usr/lib/python2.6/site-packages/Django-1.5.6-py2.6.egg
 
-# create default django db
-/usr/lib/python2.6/site-packages/webvirtmgr/manage.py syncdb --noinput
+# create default django db if not exists
+if [ ! -f /usr/lib/python2.6/site-packages/webvirtmgr/webvirtmgr.sqlite3 ]; then
+    /usr/lib/python2.6/site-packages/webvirtmgr/manage.py syncdb --noinput
+fi
 
 # set random password for webvirtmgr admin user
 password=`/sbin/e-smith/config getprop webvirtmgr Password`
