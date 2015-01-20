@@ -32,6 +32,6 @@ if [ "x$password" == "x" ]; then
 fi
 
 # create webvirtmgr admin user
-/usr/libexec/nethserver/webvirtmgr-adduser
+/usr/lib/python2.6/site-packages/webvirtmgr/webvirtmgr-adduser
 
 exit 0
