@@ -1,3 +1,6 @@
+# Disable byte compiling
+%global __os_install_post %(echo '%{__os_install_post}' | sed -e 's!/usr/lib[^[:space:]]*/brp-python-bytecompile[[:space:]].*$!!g')
+
 Summary:    WebVirtMgr panel for manage virtual machine
 Name:       nethserver-webvirtmgr
 Version:    0.0.1
@@ -31,6 +34,8 @@ rm -rf $RPM_BUILD_ROOT
 (cd root; find . -depth -print | cpio -dump $RPM_BUILD_ROOT)
 %{genfilelist} $RPM_BUILD_ROOT > %{name}-%{version}-filelist
 echo "%doc COPYING" >> %{name}-%{version}-filelist
+grep -v -E '(gunicorn.conf.pyc|gunicorn.conf.pyo)' %{name}-%{version}-filelist > tmp-filelist
+mv tmp-filelist %{name}-%{version}-filelist
 
 %post
 
