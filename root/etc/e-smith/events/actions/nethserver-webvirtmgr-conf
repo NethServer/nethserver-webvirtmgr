@@ -30,6 +30,7 @@ fi
 password=`/sbin/e-smith/config getprop webvirtmgr Password`
 if [ "x$password" == "x" ]; then
     /sbin/e-smith/config setprop webvirtmgr Password `/usr/bin/openssl rand -base64 12`
+    /usr/bin/sqlite3 /usr/lib/python2.6/site-packages/webvirtmgr/webvirtmgr.sqlite3 "INSERT INTO servers_compute VALUES (1,'localhost','localhost','','',4)"
 fi
 
 # create webvirtmgr admin user
