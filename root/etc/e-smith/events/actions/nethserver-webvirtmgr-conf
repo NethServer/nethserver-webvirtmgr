@@ -24,13 +24,13 @@ export PYTHONPATH=$PYTHONPATH:/usr/lib/python2.6/site-packages/Django-1.5.6-py2.
 # create default django db if not exists
 if [ ! -f /usr/lib/python2.6/site-packages/webvirtmgr/webvirtmgr.sqlite3 ]; then
     /usr/lib/python2.6/site-packages/webvirtmgr/manage.py syncdb --noinput
+    /usr/bin/sqlite3 /usr/lib/python2.6/site-packages/webvirtmgr/webvirtmgr.sqlite3 "INSERT INTO servers_compute VALUES (1,'localhost','localhost','','',4)"
 fi
 
 # set random password for webvirtmgr admin user
 password=`/sbin/e-smith/config getprop webvirtmgr Password`
 if [ "x$password" == "x" ]; then
     /sbin/e-smith/config setprop webvirtmgr Password `/usr/bin/openssl rand -base64 12`
-    /usr/bin/sqlite3 /usr/lib/python2.6/site-packages/webvirtmgr/webvirtmgr.sqlite3 "INSERT INTO servers_compute VALUES (1,'localhost','localhost','','',4)"
 fi
 
 # create webvirtmgr admin user
