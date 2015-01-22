@@ -47,6 +47,7 @@ my $eventsave = 'nethserver-webvirtmgr-save';
 
 event_actions($eventsave, qw(
     nethserver-webvirtmgr-conf 20
+    firewall-adjust 80
 ));
 
 event_services($eventsave, 'webvirtmgr' => 'restart');
