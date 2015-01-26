@@ -38,7 +38,7 @@ event_templates($eventupdate, qw(
 ));
 
 event_services($eventupdate, 'webvirtmgr' => 'restart');
-event_services($eventupdate, 'webvirtmgr-novnc' => 'restart');
+event_services($eventupdate, 'webvirtmgr-console' => 'restart');
 
 #
 # nethserver-webvirtmgr-save event
@@ -51,4 +51,4 @@ event_actions($eventsave, qw(
 ));
 
 event_services($eventsave, 'webvirtmgr' => 'restart');
-event_services($eventsave, 'webvirtmgr-novnc' => 'restart');
+event_services($eventsave, 'webvirtmgr-console' => 'restart');

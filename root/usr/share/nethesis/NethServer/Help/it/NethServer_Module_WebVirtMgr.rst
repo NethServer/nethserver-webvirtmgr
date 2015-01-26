@@ -14,5 +14,5 @@ Gestore di macchine virtuali
 noVNC (Shell remota)
     Abilita o disabilita il servizio per accedere alla macchina da remoto.
 
-Credentials
+Credenziali
     Cambia password per l'utente *admin*

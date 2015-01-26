@@ -1,4 +1,4 @@
-prog="webvirtmgr-novnc"
+prog="webvirtmgr-console"
 exec="/usr/lib/python2.6/site-packages/webvirtmgr/console/$prog"
 lockfile="/var/lock/subsys/$prog"
 pidfile="/var/run/webvirtmgr/$prog.pid"
