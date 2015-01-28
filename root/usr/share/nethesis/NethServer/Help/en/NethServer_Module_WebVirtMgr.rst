@@ -1,6 +1,6 @@
-=======================
-Virtual machine manager
-=======================
+================
+Virtual machines
+================
 
 Manage virtual machines through web interface.
 
@@ -11,7 +11,7 @@ Manage virtual machines through web interface.
 Virtual machine manager
     Enable or disable the service.
 
-noVNC (Remote shell)
+Web console
     Enable or disable novnc service to access to machines remotely
 
 Credentials

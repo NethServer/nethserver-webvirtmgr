@@ -1,6 +1,6 @@
-============================
-Gestore di macchine virtuali
-============================
+=================
+Macchine virtuali
+=================
 
 Gestisci le macchine virtuali attraverso un'interfaccia web.
 
@@ -11,7 +11,7 @@ Gestisci le macchine virtuali attraverso un'interfaccia web.
 Gestore di macchine virtuali
     Abilita o disabilita il servizio.
 
-noVNC (Shell remota)
+Console web
     Abilita o disabilita il servizio per accedere alla macchina da remoto.
 
 Credenziali
