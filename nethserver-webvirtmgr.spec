@@ -9,11 +9,10 @@ License:    GPL
 URL:        %{url_prefix}/%{name}
 Source0:    %{name}-%{version}.tar.gz
 BuildArch:  noarch
+AutoReq: no
 
 Requires:   nethserver-libvirt
 Requires:   webvirtmgr
-
-BuildRequires: perl
 BuildRequires: nethserver-devtools
 
 %description
@@ -33,16 +32,13 @@ perl createlinks
 rm -rf $RPM_BUILD_ROOT
 (cd root; find . -depth -print | cpio -dump $RPM_BUILD_ROOT)
 %{genfilelist} $RPM_BUILD_ROOT > %{name}-%{version}-filelist
-echo "%doc COPYING" >> %{name}-%{version}-filelist
-grep -v -E '(gunicorn.conf.pyc|gunicorn.conf.pyo)' %{name}-%{version}-filelist > tmp-filelist
-mv tmp-filelist %{name}-%{version}-filelist
-
-%post
-
-%preun
+sed -r -i '/(\.pyc|\.pyo)$/ d' %{name}-%{version}-filelist 
 
 %files -f %{name}-%{version}-filelist
 %defattr(-,root,root)
+%doc COPYING
+%dir %{_nseventsdir}/%{name}-update
+
 
 %changelog
 * Wed Jan 28 2015 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.0.0-1.ns6
