@@ -3,7 +3,7 @@
 
 Summary:    WebVirtMgr panel for manage virtual machine
 Name:       nethserver-webvirtmgr
-Version: 1.0.0
+Version: 1.0.1
 Release: 1%{?dist}
 License:    GPL
 URL:        %{url_prefix}/%{name}
@@ -45,6 +45,9 @@ mv tmp-filelist %{name}-%{version}-filelist
 %defattr(-,root,root)
 
 %changelog
+* Tue Sep 29 2015 Davide Principi <davide.principi@nethesis.it> - 1.0.1-1
+- Make Italian language pack optional - Enhancement #3265 [NethServer]
+
 * Wed Jan 28 2015 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.0.0-1.ns6
 - First release: KVM - virtual machines - Feature #1761 [NethServer]
 
