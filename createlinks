@@ -34,7 +34,7 @@ event_actions($eventupdate, qw(
 ));
 
 event_templates($eventupdate, qw(
-    /usr/lib/python2.6/site-packages/webvirtmgr/conf/gunicorn.conf.py
+    /usr/lib/python2.7/site-packages/webvirtmgr/conf/gunicorn.conf.py
 ));
 
 event_services($eventupdate, 'webvirtmgr' => 'restart');
