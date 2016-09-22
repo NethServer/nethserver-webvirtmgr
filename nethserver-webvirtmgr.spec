@@ -3,7 +3,7 @@
 
 Summary:    WebVirtMgr panel for manage virtual machine
 Name:       nethserver-webvirtmgr
-Version: 1.1.0
+Version: 1.1.1
 Release: 1%{?dist}
 License:    GPL
 URL:        %{url_prefix}/%{name}
@@ -41,6 +41,9 @@ sed -r -i '/(\.pyc|\.pyo)$/ d' %{name}-%{version}-filelist
 
 
 %changelog
+* Thu Sep 22 2016 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.1.1-1
+- Wrong port range separator in webvirtmgr-console  - Bug NethServer/dev#5112
+
 * Thu Jul 07 2016 Stefano Fancello <stefano.fancello@nethesis.it> - 1.1.0-1
 - First NS7 release
 
